@@ -21,18 +21,15 @@ def random_zeroes_ones():
 def iter_zeroes_ones_minus_ones():   # an infinite iterator
     i = 0
     step = 1
-    useMinusSign = False
     while True:
-        if(useMinusSign == True):
-            yield -1*(i % 2)
-            useMinusSign = False
+        if(((i+1) % 4) == 0):
+            yield (-1*(i % 2))
         else:
             yield i%2
-            useMinusSign = True
         i += step
 
 
-#test iter_zeroes_ones
+# test iter_zeroes_ones
 # startId = 0
 # expectedNumberOfIterations = 100
 # print("iter_zeroes_ones:")

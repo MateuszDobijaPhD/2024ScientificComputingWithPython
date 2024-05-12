@@ -44,7 +44,7 @@
 # assert len(S) == 2
 #
 # print("Tests passed")
-
+import math
 class Vector:
     def __init__(self, x, y, z):
         self.x = x
@@ -85,19 +85,32 @@ class Vector:
     def __hash__(self):   # we assume that vectors are immutable
         return hash((self.x, self.y, self.z))   # recommended
 
-# Exemplary tests. Change values in your tests.
-import math
-v = Vector(1, 2, 3)
-w = Vector(2, -3, 2)
-print("vector v:", v)
-print("vector w:", w)
-assert v != w
-assert v + w == Vector(3, -1, 5)
-assert v - w == Vector(-1, 5, 1)
-assert v * w == 2
-assert v.cross(w) == Vector(13, 4, -7)
-assert v.length() == math.sqrt(14)
-S = set([v, v, w])
-assert len(S) == 2
+    def isParallel(self, other):
+        return self.cross(other) == Vector(0, 0, 0)
 
-print("Tests passed")
+    def isZero(self):
+        return self.length() == 0
+
+    def getUnitVector(self):
+        magnitude = self.length()
+        newX = self.x / magnitude
+        newY = self.y / magnitude
+        newZ = self.z / magnitude
+        return Vector(newX, newY, newZ)
+
+# Exemplary tests. Change values in your tests.
+# import math
+# v = Vector(1, 2, 3)
+# w = Vector(2, -3, 2)
+# print("vector v:", v)
+# print("vector w:", w)
+# assert v != w
+# assert v + w == Vector(3, -1, 5)
+# assert v - w == Vector(-1, 5, 1)
+# assert v * w == 2
+# assert v.cross(w) == Vector(13, 4, -7)
+# assert v.length() == math.sqrt(14)
+# S = set([v, v, w])
+# assert len(S) == 2
+#
+# print("Tests passed")
