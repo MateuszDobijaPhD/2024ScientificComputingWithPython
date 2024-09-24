@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module calculator2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>calculator2</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cobliczenia_naukowe_w_jezyku_python%5Cproject%5Ccalculator2.py">d:\obliczenia_naukowe_w_jezyku_python\project\calculator2.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;is&nbsp;the&nbsp;documentation&nbsp;for&nbsp;the&nbsp;<a href="#Calculator">Calculator</a>&nbsp;project.<br>
+The&nbsp;project&nbsp;has&nbsp;been&nbsp;presented&nbsp;as&nbsp;a&nbsp;final&nbsp;project&nbsp;for&nbsp;"Scientific&nbsp;Computing&nbsp;with&nbsp;Python"&nbsp;classes&nbsp;at&nbsp;the&nbsp;Jagiellonian&nbsp;University.<br>
+&nbsp;<br>
+author:&nbsp;Mateusz&nbsp;Dobija<br>
+email:&nbsp;mateusz.dobija@doctoral.uj.edu.pl<br>
+academic&nbsp;year:&nbsp;2023/2024<br>
+year&nbsp;of&nbsp;phd&nbsp;studies:&nbsp;III<br>
+program:&nbsp;Technical&nbsp;Computer&nbsp;Science&nbsp;and&nbsp;Telecommunication<br>
+classes:&nbsp;Scientific&nbsp;Computing&nbsp;with&nbsp;Python<br>
+&nbsp;<br>
+To&nbsp;generate&nbsp;HTML&nbsp;documentation&nbsp;for&nbsp;this&nbsp;module&nbsp;issue&nbsp;the&nbsp;command:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pydoc&nbsp;-w&nbsp;calculator2.py</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="tkinter.filedialog.html">tkinter.filedialog</a><br>
+</td><td width="25%" valign=top><a href="tkinter.html">tkinter</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="calculator2.html#Calculator">Calculator</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Calculator">class <strong>Calculator</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Main&nbsp;class&nbsp;responsible&nbsp;for&nbsp;<a href="#Calculator">Calculator</a>&nbsp;generation.<br>
+Hold&nbsp;variables:<br>
+-&nbsp;root&nbsp;-&gt;&nbsp;Tk<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Responsible&nbsp;for&nbsp;main&nbsp;window<br>
+-&nbsp;display_string_var<br>
+&nbsp;&nbsp;&nbsp;&nbsp;StringVariable,&nbsp;which&nbsp;content&nbsp;is&nbsp;shown&nbsp;at&nbsp;the&nbsp;display&nbsp;of&nbsp;calculator<br>
+-&nbsp;isLastClickedButtonResult<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Flag&nbsp;indicating&nbsp;if&nbsp;last&nbsp;clicked&nbsp;button&nbsp;was&nbsp;sign&nbsp;=.<br>
+-&nbsp;isLastObtainedResultError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Flag&nbsp;indicating&nbsp;if&nbsp;last&nbsp;obtained&nbsp;result&nbsp;was&nbsp;"error"<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Calculator-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Calculator-button_clear"><strong>button_clear</strong></a>(self)</dt><dd><tt>Function&nbsp;handling&nbsp;click&nbsp;on&nbsp;"C"&nbsp;sign&nbsp;on&nbsp;calculator.<br>
+Clear&nbsp;the&nbsp;display.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="Calculator-button_click"><strong>button_click</strong></a>(self, clickedNumberOrSign)</dt><dd><tt>Function&nbsp;handling&nbsp;click&nbsp;on&nbsp;the&nbsp;button.<br>
+If&nbsp;the&nbsp;last&nbsp;clicked&nbsp;button&nbsp;was&nbsp;=,&nbsp;and&nbsp;last&nbsp;obtain&nbsp;result&nbsp;was&nbsp;error,&nbsp;before&nbsp;further&nbsp;action&nbsp;clear&nbsp;the&nbsp;variable&nbsp;indicating&nbsp;string&nbsp;on&nbsp;a&nbsp;display.<br>
+If&nbsp;the&nbsp;last&nbsp;clicked&nbsp;button&nbsp;was&nbsp;=,&nbsp;and&nbsp;currently&nbsp;handled&nbsp;button&nbsp;represents&nbsp;a&nbsp;number&nbsp;of&nbsp;a&nbsp;brace,&nbsp;before&nbsp;further&nbsp;action&nbsp;clear&nbsp;the&nbsp;variable&nbsp;indicating&nbsp;string&nbsp;on&nbsp;a&nbsp;display.<br>
+&nbsp;<br>
+:param&nbsp;clickedNumberOrSign:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Sign,&nbsp;e.g.&nbsp;+,-,/,*,(,)&nbsp;or&nbsp;a&nbsp;number&nbsp;from&nbsp;0&nbsp;to&nbsp;9<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="Calculator-button_delete"><strong>button_delete</strong></a>(self)</dt><dd><tt>Function&nbsp;handling&nbsp;click&nbsp;on&nbsp;button&nbsp;"Del"&nbsp;on&nbsp;a&nbsp;calculator.<br>
+Function&nbsp;delete&nbsp;last&nbsp;(from&nbsp;right&nbsp;side)&nbsp;element&nbsp;from&nbsp;display,&nbsp;so&nbsp;the&nbsp;last&nbsp;typed&nbsp;number&nbsp;or&nbsp;a&nbsp;sign.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="Calculator-button_result"><strong>button_result</strong></a>(self)</dt><dd><tt>Function&nbsp;handling&nbsp;click&nbsp;on&nbsp;"="&nbsp;button.<br>
+Calculates&nbsp;result&nbsp;from&nbsp;arithmetic&nbsp;operation&nbsp;typed&nbsp;at&nbsp;the&nbsp;calculator,&nbsp;and&nbsp;set&nbsp;result&nbsp;on&nbsp;a&nbsp;display&nbsp;string.<br>
+If&nbsp;the&nbsp;evaluation&nbsp;error&nbsp;is&nbsp;raised,&nbsp;set&nbsp;"error"&nbsp;string&nbsp;on&nbsp;a&nbsp;display&nbsp;string.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="Calculator-callback"><strong>callback</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Calculator-createButtons"><strong>createButtons</strong></a>(self)</dt><dd><tt>Function&nbsp;responsible&nbsp;for&nbsp;creating&nbsp;Frame&nbsp;containing&nbsp;buttons&nbsp;on&nbsp;a&nbsp;calculator.<br>
+Connects&nbsp;particular&nbsp;button&nbsp;to&nbsp;proper&nbsp;functions&nbsp;handling&nbsp;click&nbsp;on&nbsp;them,&nbsp;passing&nbsp;number&nbsp;or&nbsp;sign&nbsp;to&nbsp;a&nbsp;handling&nbsp;function&nbsp;if&nbsp;needed.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="Calculator-createDisplay"><strong>createDisplay</strong></a>(self)</dt><dd><tt>Function&nbsp;responsible&nbsp;for&nbsp;creating&nbsp;a&nbsp;display&nbsp;of&nbsp;the&nbsp;calculator,&nbsp;and&nbsp;connecting&nbsp;instance's&nbsp;variable&nbsp;display_string_var&nbsp;as&nbsp;a&nbsp;string&nbsp;presented&nbsp;on&nbsp;a&nbsp;display.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="Calculator-generateCalculator"><strong>generateCalculator</strong></a>(self)</dt><dd><tt>Main&nbsp;function,&nbsp;generating&nbsp;a&nbsp;calculator&nbsp;and&nbsp;setting&nbsp;inctances'&nbsp;variables.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="Calculator-getMainWindow"><strong>getMainWindow</strong></a>(self)</dt><dd><tt>Function&nbsp;returning&nbsp;instance&nbsp;of&nbsp;main&nbsp;window.&nbsp;with&nbsp;set&nbsp;parameters&nbsp;like&nbsp;size,&nbsp;title,&nbsp;ability&nbsp;to&nbsp;resize.<br>
+:return:&nbsp;root-&gt;Tk<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Instance&nbsp;of&nbsp;Tk&nbsp;class,&nbsp;representing&nbsp;main&nbsp;window&nbsp;of&nbsp;application</tt></dd></dl>
+
+<dl><dt><a name="Calculator-isBrace"><strong>isBrace</strong></a>(self, clickedNumberOrSign)</dt><dd><tt>Function&nbsp;checking&nbsp;if&nbsp;element&nbsp;clickedNumberOrSign,&nbsp;passed&nbsp;as&nbsp;parameter,&nbsp;is&nbsp;an&nbsp;opening&nbsp;or&nbsp;a&nbsp;closing&nbsp;brace.<br>
+&nbsp;<br>
+:param&nbsp;clickedNumberOrSign:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Sign,&nbsp;e.g.&nbsp;+,-,/,*,(,)&nbsp;or&nbsp;a&nbsp;number&nbsp;from&nbsp;0&nbsp;to&nbsp;9<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;if&nbsp;clickedNumberOrSign&nbsp;contains&nbsp;a&nbsp;brace,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;False&nbsp;if&nbsp;clickedNumberOrSign&nbsp;doesn't&nbsp;contain&nbsp;a&nbsp;brace</tt></dd></dl>
+
+<dl><dt><a name="Calculator-isNumber"><strong>isNumber</strong></a>(self, clickedNumberOrSign)</dt><dd><tt>Function&nbsp;checking&nbsp;if&nbsp;element&nbsp;clickedNumberOrSign,&nbsp;passed&nbsp;as&nbsp;parameter,&nbsp;is&nbsp;number&nbsp;from&nbsp;0&nbsp;to&nbsp;9.<br>
+:param&nbsp;clickedNumberOrSign:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Sign,&nbsp;e.g.&nbsp;+,-,/,*,(,)&nbsp;or&nbsp;a&nbsp;number&nbsp;from&nbsp;0&nbsp;to&nbsp;9<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;if&nbsp;clickedNumberOrSign&nbsp;contains&nbsp;a&nbsp;number,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;False&nbsp;if&nbsp;clickedNumberOrSign&nbsp;doesn't&nbsp;contain&nbsp;a&nbsp;number</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
