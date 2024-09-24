@@ -26,8 +26,8 @@ def isBrace(clickedNumberOrSign):
     return False
 
 def button_click(clickedNumberOrSign, display_string_var, isLastClickedButtonResult, isLastObtainedResultError):
-    if isLastClickedButtonResult.get() == True:
-        if isLastObtainedResultError.get() == True:
+    if isLastClickedButtonResult.get():
+        if isLastObtainedResultError.get():
             display_string_var.set("")
         elif (isNumber(clickedNumberOrSign) or isBrace(clickedNumberOrSign)):
             display_string_var.set("")
@@ -130,7 +130,7 @@ def createButtons(root, display_string_var, isLastClickedButtonResult, isLastObt
 def callback():
     print("called the callback!")
 
-def generateCalvulatot():
+def generateCalculator():
     root = getMainWindow()
     display_string_var = tk.StringVar()
     display_string_var.set("")
@@ -142,7 +142,7 @@ def generateCalvulatot():
 
 if __name__ == "__main__":
 
-    generateCalvulatot()
+    generateCalculator()
 
 #pydoc - dokumentacja
 #

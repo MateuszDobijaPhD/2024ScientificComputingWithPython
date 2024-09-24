@@ -33,8 +33,14 @@ class Calculator:
     """
 
     def __init__(self):
-        #self.generateCalvulatot()
-        pass
+        self.root = self.getMainWindow()
+        self.display_string_var = tk.StringVar()
+        self.display_string_var.set("")
+        self.isLastClickedButtonResult = tk.BooleanVar(value=False)
+        self.isLastObtainedResultError = tk.BooleanVar(value=False)
+        self.createDisplay()
+        self.createButtons()
+        self.root.mainloop()
     def getMainWindow(self):
         """
         Function returning instance of main window. with set parameters like size, title, ability to resize.
@@ -89,8 +95,8 @@ class Calculator:
             Sign, e.g. +,-,/,*,(,) or a number from 0 to 9
         :return:
         """
-        if self.isLastClickedButtonResult.get() == True:
-            if self.isLastObtainedResultError.get() == True:
+        if self.isLastClickedButtonResult.get():
+            if self.isLastObtainedResultError.get():
                 self.display_string_var.set("")
             elif (self.isNumber(clickedNumberOrSign) or self.isBrace(clickedNumberOrSign)):
                 self.display_string_var.set("")
@@ -218,20 +224,6 @@ class Calculator:
     def callback(self):
         print("called the callback!")
 
-    def generateCalculator(self):
-        """
-        Main function, generating a calculator and setting inctances' variables.
-        :return:
-        """
-        self.root = self.getMainWindow()
-        self.display_string_var = tk.StringVar()
-        self.display_string_var.set("")
-        self.isLastClickedButtonResult = tk.BooleanVar(value=False)
-        self.isLastObtainedResultError = tk.BooleanVar(value=False)
-        self.createDisplay()
-        self.createButtons()
-        self.root.mainloop()
 
 if __name__ == "__main__":
     calculator = Calculator()
-    calculator.generateCalculator()
